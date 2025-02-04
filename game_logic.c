@@ -220,10 +220,10 @@ void displayMenu() {
 
 				if(isResolved(mat)) {
 
-					printf("Risolto\n");
+					printf("Il sudoku è risolto\n");
 				} else {
 
-					printf("Non risolto\n");
+					printf("Il sudoku non è risolto\n");
 				}
 				break;
 			}
@@ -319,8 +319,8 @@ int isResolved(int mat[][SIDE]) {
 				used[mat[i][j]] = 1;
 			}
 		}
-
-		printf("Riga %d: Risolvibile: %d\n", i, risolvibile);
+/*
+		printf("Riga %d: Risolvibile: %d\n", i, risolvibile);*/
 	}
 
 	/*
@@ -345,12 +345,9 @@ int isResolved(int mat[][SIDE]) {
 				used[mat[i][j]] = 1;
 			}
 		}
-
-		printf("Colonna %d: Risolvibile: %d\n", j, risolvibile);
-	}
-
-	/* C'E' UN ERRORE DA QUALCHE PARTE QUI DENTRO PK SUL CHECK RIGHE/COLONNE VA MA QUI NO. CONTROLLA */
-	
+/*
+		printf("Colonna %d: Risolvibile: %d\n", j, risolvibile);*/
+	}	
 	
 	for(i = 0; i < SIDE/3; i++) {
 		
